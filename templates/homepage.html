@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+    {% block head %}
+        <title>Homepage</title>
+    {% endblock %}
+
+    {% block body %}
+
+    <h1>Hello, {{ user }}!</h1>
+    <p>
+        welcome to the Homepage!
+    </p>
+        <p>Your Bank ID is: {{ bank_id }}</p>
+        <div class="buttonlength">
+            <a class="nuhuhline" href="{{ url_for('balance') }}"> 
+                <p class="buttonsapl" id="buttonsbig">Check your account</p> 
+            </a>
+        </div>
+        <div class="buttonlength">
+            <a class="nuhuhline" href="{{ url_for('deposit') }}"> 
+                <p class="buttonsapl" id="buttonsbig">Deposit</p> 
+            </a>
+        </div>
+        <div class="buttonlength">
+            <a class="nuhuhline" href="{{ url_for('withdraw') }}"> 
+                <p class="buttonsapl" id="buttonsbig">Withdraw</p> 
+            </a>
+        </div>
+    <!-- buttons/links to send you to each respective page -->
+    {% endblock %}

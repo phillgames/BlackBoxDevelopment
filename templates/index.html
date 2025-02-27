@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+
+    {% block head %}
+    <title>Home-page</title>
+    {% endblock %}
+
+
+    {% block body %}
+    <p class="buttonsapl" id="buttonsbig">See what we have to offer!</p> 
+    
+    <a class="nuhuhline" href="{{ url_for('main') }}"> 
+        <p class="buttonsapl" id="buttonsbig">--></p> 
+    </a>
+    <!--url to go to form after clicking a button -->
+    {% endblock %}

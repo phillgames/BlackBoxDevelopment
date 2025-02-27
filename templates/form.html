@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+
+    {% block head %}
+    <title>Sign-in</title>
+    {% endblock %}
+
+
+    {% block body %}
+    <div class="maincontainer">
+        <div class="signup">
+                <h1>Sign up</h1>
+            <div class="name" id="spacebetween">    
+                <form action="/submit" method="POST"> <!--puts ur info into the database-->
+                <label for="fullname">Full Name:</label>
+                <input class="inputsize" type="text" id="fullname" name="fullname" required>
+            </div>    
+                <!-- <br> -->
+            <div class="mail" id="spacebetween">    
+                <form action="/submit" method="POST"> <!--puts ur info into the database-->
+                <label for="email">Email:</label>
+                <input class="inputsize" type="email" id="email" name="email" required>
+            </div>    
+                <!-- <br> -->
+            <div class="pass" id="spacebetween">    
+                <label for="password">Password:</label>
+                <input class="inputsize" type="password" id="password" name="password" required>
+            </div>    
+            <br>
+                <!-- <br> -->
+                <div class="sublog">
+                    <button class="buttonsapl" id="buttonssml" type="submit">Submit</button>
+                </div>
+                </form>
+        </div>
+    </div>
+    <!-- this whole thing takes your name, email, and password and sends it into the backend of the website -->
+    {% endblock %}
+

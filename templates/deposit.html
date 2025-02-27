@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+    {% block head %}
+        <title>Deposit</title>
+    {% endblock %}
+
+    {% block body %}
+    <div class="buttonlength">
+        <a class="nuhuhline" href="{{ url_for('homepage') }}"> 
+            <p class="buttonsapl" id="buttonsbig">Home</p> 
+        </a>
+    </div>
+        <!-- home button -->
+    <p>
+        write how much you want to deposit
+    </p>
+    <form action="/add2bank" method="POST"> <!--puts your info into the database-->
+        <label for="amount">Amount:</label>
+        <input class="inputsize" type="number" id="amount" name="amount" required>
+        <button class="buttonsapl" id="buttonssml" type="submit">Deposit</button>
+    </form>
+    <!-- form that sends the amount you put in to the backend database -->
+    {% endblock %}
